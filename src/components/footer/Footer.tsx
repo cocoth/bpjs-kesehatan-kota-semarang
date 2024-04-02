@@ -19,6 +19,8 @@ const Footer = () => {
                             BPJS Kesehatan Kota Semarang
                         </h1>
                         <Link
+                            target="_blank" 
+                            rel="noopener noreferrer"
                             href={`https://maps.app.goo.gl/2zLYxrgz25qmG4zm6`}
                             className='text-gray-300'>
                             Alamat: Jl. Sultan Agung No.144, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232
