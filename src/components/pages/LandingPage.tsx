@@ -110,16 +110,16 @@ const LandingPage = () => {
                                     {menuContent[selectedItem].map((item, i) => (
                                         <Card
                                             key={`MENU-CONTENT-[${i}]`}
-                                            className='flex flex-col'
+                                            className='flex flex-col overflow-hidden'
                                         >
-                                            <CardContent className='relative py-2 overflow-hidden'>
+                                            <CardContent className='relative py-2'>
                                                 <h1 className='font-poppins font-semibold'>
                                                     {item.title}
                                                 </h1>
                                                 <CardDescription className='font-sans'>
                                                     {item.content}
                                                 </CardDescription>
-                                                <div className='absolute flex self-center inset-0 w-1 pl-3 h-[100%] rounded-md bg-preset-blue/60'></div>
+                                                <div className='absolute flex self-center inset-0 w-1 pl-3 h-[100%] bg-preset-blue/60'></div>
                                             </CardContent>
                                         </Card>
                                     ))}
