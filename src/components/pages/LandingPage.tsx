@@ -12,13 +12,21 @@ import { menuBar, menuContent, menuContentImage } from '@/data-content/layanan'
 
 const LandingPage = () => {
     const plugin = useRef(
-        Autoplay({ delay: 2000, stopOnInteraction: false })
+        Autoplay({ delay: 2500, stopOnInteraction: false })
     )
     const images = [
-        '/assets/bpjs-patung.jpg',
-        '/assets/bpjs-depan.jpg',
-        '/assets/bpjs-samping.jpg',
-        '/assets/pelayanan-tatapmuka.webp',
+        {
+            img: '/assets/bpjs-depan-baru.jpg',
+            title: 'BPJS kesehatan kota semarang'
+        },
+        {
+            img: '/assets/antrian-pelayanan.jpg',
+            title: 'Pelayanan masyarakat'
+        },
+        {
+            img: '/assets/pelayanan-masyarakat.jpg',
+            title: 'Pendaftaran BPJS'
+        }
     ]
     const [selectedItem, setSelectedItem] = useState<number | null>(0)
     const handleItemClick = (item: number) => {
@@ -33,7 +41,7 @@ const LandingPage = () => {
                     BPJS Kesehatan Kota Semarang
                 </h1>
             </section>
-            <section className='flex flex-col md:flex-row justify-center md:justify-start md:px-1'>
+            <section className='flex flex-col md:flex-row justify-center md:justify-start '>
                 <Carousel
                     plugins={[plugin.current]}
                     className="w-full z-0"
@@ -46,14 +54,16 @@ const LandingPage = () => {
                                 <div className="">
                                     <Card className=''>
                                         <CardContent
-                                            className="relative w-full h-[60dvh] items-center justify-center p-6 rounded-md overflow-hidden"
+                                            className="relative w-full h-[60dvh] md:h-[80dvh] items-center justify-center p-6 rounded-md overflow-hidden"
                                         >
                                             <Image
-                                                src={item}
+                                                src={item.img}
                                                 alt={`just images`}
+                                                // width={1280}
+                                                // height={960}
                                                 fill
-                                                sizes='(max-width: 720px)50vw, (max-width: 1200px)50vw, 33vw'
-                                                className='object-cover hover:scale-110 ease-in-out duration-700'
+                                                // sizes='(max-width: 720px)50vw, (max-width: 1200px)50vw, 33vw'
+                                                className='w-full h-full object-cover object-center hover:scale-110 ease-in-out duration-700'
                                             />
                                         </CardContent>
                                     </Card>

@@ -71,12 +71,12 @@ const Services = () => {
                                                 {item.description}
                                             </p>
                                         </div>
-                                        <TooltipContent>
-                                            <p className=' max-w-44 text-center'>
-                                                {item.hover}
-                                            </p>
-                                        </TooltipContent>
                                     </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p className=' max-w-44 text-center'>
+                                            {item.hover}
+                                        </p>
+                                    </TooltipContent>
                                 </Tooltip>
                             </TooltipProvider>
                         </section>
