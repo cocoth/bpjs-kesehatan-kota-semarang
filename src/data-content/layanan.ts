@@ -43,7 +43,7 @@ export const menuContent = [
     [
         {
             title: 'Pelayanan Administrasi Melalui WhatsApp (PANDAWA)',
-            content: 'merupakan Kanal Layanan tanpa Tatap Muka/tanpa kontak fisik antara frontliner dan peserta dengan menggunakan media WhatsApp untuk memfasilitasi peserta dalam mendapatkan layanan administrasi kepesertaan. PANDAWA dapat diakses oleh Peserta melalui nomor 0811-8-165-165 pada hari dan jam kerja (Senin s/d Jumat pukul 08.00-16.00). Adapun jenis layanan pada PANDAWA yaitu:',
+            content: 'merupakan Kanal Layanan tanpa Tatap Muka/tanpa kontak fisik antara frontliner dan peserta dengan menggunakan media WhatsApp untuk memfasilitasi peserta dalam mendapatkan layanan administrasi kepesertaan. PANDAWA dapat diakses oleh Peserta melalui nomor 0811-8-165-165 selama 24 jam. Adapun jenis layanan pada PANDAWA yaitu:',
 
         },
         {
