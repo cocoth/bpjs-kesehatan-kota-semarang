@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -17,9 +18,11 @@ const Footer = () => {
                         <h1 className='font-bold text-base md:text-lg'>
                             BPJS Kesehatan Kota Semarang
                         </h1>
-                        <p className='text-gray-300'>
-                            Jl. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero quo quae repellat?
-                        </p>
+                        <Link
+                            href={`https://maps.app.goo.gl/2zLYxrgz25qmG4zm6`}
+                            className='text-gray-300'>
+                            Alamat: Jl. Sultan Agung No.144, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232
+                        </Link>
                     </div>
                 </section>
                 <section>
