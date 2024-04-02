@@ -14,8 +14,8 @@ const page = () => {
     return (
         <div className=''>
             <section className='bg-preset-blue py-2 px-3 md:px-4'>
-                <h1 className='text-lg md:text-2xl text-white font-bold font-poppins'>
-                    Data Fasillitas Kesehatan
+                <h1 className='text-sm md:text-2xl text-white font-bold font-poppins'>
+                    Data Fasillitas Kesehatan Kab. Demak
                 </h1>
             </section>
             <section className='mx-7 my-2'>
