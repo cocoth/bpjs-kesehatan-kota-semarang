@@ -36,7 +36,7 @@ const MobileNavbar = () => {
                                     className="text-blue-700 hover:underline underline-offset-1"
                                 >
                                     <Link
-                                        href={list.toLowerCase()}
+                                        href={item.links[idx]}
                                     >
                                         {list}
                                     </Link>
