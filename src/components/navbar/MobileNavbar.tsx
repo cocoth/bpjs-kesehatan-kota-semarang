@@ -8,8 +8,6 @@ import Link from "next/link";
 
 const MobileNavbar = () => {
     const [sideBarOpen, setSideBarOpen] = useState(false)
-    const [activePage, setActivePage] = useState<string | null>(null)
-    // console.log({activePage})
     const handleSideBarClick = () => {
         setSideBarOpen(!sideBarOpen)
     }
@@ -26,19 +24,19 @@ const MobileNavbar = () => {
                 </SheetTrigger>
                 <SheetContent className="w-1/2">
                     {itemsNavbar.map((item, i) => (
-                        <SheetHeader key={`[${item.title}] - ${uuid}`}>
+                        <SheetHeader 
+                        key={`[${item.title}] - ${uuid}`}
+                        >
                             <SheetTitle>
                                 {item.title}
                             </SheetTitle>
                             {item.lists.map((list, idx) => (
                                 <SheetDescription
                                     key={`list-${list} [${idx}]`}
-                                    // onClick={() => setActivePage(item.links[i])}
                                     className="text-blue-700 hover:underline underline-offset-1"
                                 >
                                     <Link
-                                        href={item.links[i]}
-                                        // className={activePage === item.links[i] ? 'bg-preset-blue rounded py-2 px-3 text-white' : ''}
+                                        href={list.toLowerCase()}
                                     >
                                         {list}
                                     </Link>
