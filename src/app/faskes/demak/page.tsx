@@ -1,35 +1,71 @@
+'use client'
 import '@/css/scroll.css'
 import ReadCSV from '@/components/utils/ReadCSV'
-import React from 'react'
+import React, { useState } from 'react'
 import { Card } from '@/components/ui/card'
 
+const titleFaskes = [
+    'Dokter Perorangan',
+    'Dokter Gigi',
+    'Rumah Sakit',
+    'Klinik',
+    'Puskesmas',
+]
+
 const dataFaskes = [
-    '/data/data-demak/dokter-Praktek-Perorangan.csv',
+    '/data/data-demak/dokter-perorangan-demak.csv',
     '/data/data-demak/dokter-gigi.csv',
-    '/data/data-demak/klinik.csv',
+    '/data/data-demak/rs-demak.csv',
+    '/data/data-demak/klinik-demak.csv',
     '/data/data-demak/puskesmas.csv',
 ]
 
+
+
 const page = () => {
+    const [selectedItem, setSelectedItem] = useState<number | null>(0)
+    const handleItemClick = (item: number) => {
+        setSelectedItem(item)
+    }
     return (
         <div className=''>
-            <section className='bg-preset-blue py-2 px-3 md:px-4'>
+            <section className='flex items-center bg-preset-blue py-2 px-3 md:px-4'>
                 <h1 className='text-sm md:text-2xl text-white font-bold font-poppins'>
                     Data Fasillitas Kesehatan Kab. Demak
                 </h1>
             </section>
-            <section className='mx-7 my-2'>
-                <div className='flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-5 items-center justify-center md:justify-around'>
-                    {dataFaskes.map((item, i) =>
+            <div className='flex flex-col md:flex-row gap-4 mx-3 my-3'>
+                <div className='flex justify-center '>
+                    <section className='border md:border-none rounded-full md:rounded-none overflow-x-auto md:overflow-visible scroll-bar '>
+                        <div className='flex md:flex-col justify-center gap-1 w-max md:h-max py-1 px-2'>
+                            {titleFaskes.map((title, i) =>
+                                <Card
+                                    key={`FASKES-[${i}]`}
+                                    onClick={() => handleItemClick(i)}
+                                    className={`py-1 px-2 rounded-full cursor-pointer ${selectedItem === i ? 'bg-preset-blue text-white border border-preset-violet rounded-full' : 'bg-preset-lightGray'}`}
+
+                                >
+                                    {title}
+                                </Card>
+                            )}
+                        </div>
+                    </section>
+                </div>
+                <section
+                    className='flex mx-5 justify-center my-2'
+                >
+                    {selectedItem !== null && (
                         <Card
-                            key={`FASKES-[${i}]`}
-                            className='w-full shadow-lg shadow-gray-900'
-                            >
-                            <ReadCSV className='max-h-52 w-full p-3 overflow-auto scroll-bar' data={item} />
+                            className='flex border rounded-xl p-3 shadow-md shadow-gray-800'
+                        >
+                            <ReadCSV
+                                data={dataFaskes[selectedItem]}
+                                className='max-h-[50dvh] overflow-auto scroll-bar'
+                            />
                         </Card>
                     )}
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     )
 }

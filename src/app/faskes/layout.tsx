@@ -7,7 +7,7 @@ const FaskesLayout = ({
     children: React.ReactNode
 }) => {
   return (
-    <main>
+    <main className='flex flex-col justify-between min-h-screen'>
         {children}
         <Footer/>
     </main>

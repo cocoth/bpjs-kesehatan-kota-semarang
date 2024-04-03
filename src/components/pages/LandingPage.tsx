@@ -77,8 +77,8 @@ const LandingPage = () => {
                 <Services />
             </section>
             <section>
-                <div className='flex flex-col my-3 justify-center items-center font-fjallaOne'>
-                    <h1 className='text-2xl'>
+                <div className='flex flex-col mt-3 mb-1 justify-center items-center font-fjallaOne'>
+                    <h1 className='text-2xl my-2'>
                         Layanan Informasi dan Administrasi
                     </h1>
                     <section className='ring-1 ring-gray-600 bg-gray-200 rounded-full'>
@@ -94,7 +94,7 @@ const LandingPage = () => {
                             ))}
                         </ul>
                     </section>
-                    <section className='my-2'>
+                    <section className='mt-3'>
                         {selectedItem !== null && (
                             <div className='grid grid-flow-row md:grid-cols-2 md:mx-10 md:h-80 gap-2 justify-center'>
                                 <section className='flex mx-3 md:w-full justify-center items-center overflow-hidden'>
@@ -106,7 +106,7 @@ const LandingPage = () => {
                                         className='w-max object-cover object-center'
                                     />
                                 </section>
-                                <section className='flex flex-col gap-2 mx-5  h-1/2 sm:h-[80%] md:h-full overflow-scroll scroll-bar'>
+                                <section className='flex flex-col gap-2 mx-5 h-96 md:h-full overflow-scroll scroll-bar'>
                                     {menuContent[selectedItem].map((item, i) => (
                                         <Card
                                             key={`MENU-CONTENT-[${i}]`}
