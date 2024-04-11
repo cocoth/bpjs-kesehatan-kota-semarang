@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fajllaOne, lobster, poppins, ubuntu } from "@/lib/font";
 import "@/css/globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "BPJS Kesehatan - Kota Semarang",
@@ -13,6 +14,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // redirect('/payment')
   return (
     <html lang="en">
       <body className={`${fajllaOne.variable} ${lobster.variable} ${poppins.variable} ${ubuntu.variable}`}>
