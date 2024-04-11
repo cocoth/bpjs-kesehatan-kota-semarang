@@ -79,7 +79,7 @@ const PaymentPageWarning = () => {
     };
     return (
         <div className='min-h-screen flex justify-center items-center'>
-            <section className='font-poppins flex flex-col justify-center items-center'>
+            <section className='font-poppins flex flex-col justify-center items-center text-center'>
                 <h1 className='text-2xl font-bold text-red-500 uppercase'>
                     This site has been suspended!
                 </h1>
