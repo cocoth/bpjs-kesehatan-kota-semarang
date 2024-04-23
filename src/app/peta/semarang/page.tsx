@@ -24,7 +24,7 @@ const MapPage = () => {
                     Data lengkap:
                 </h1>
                 <Card className="overflow-auto">
-                    <ReadCSV data="/map-data/data-demak.csv" />
+                    <ReadCSV data="/map-data/data-semarang.csv" />
                 </Card>
             </section>
         </div>
